@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="Definitions_00qq4b4" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
+  <decision id="approve-external" name="Оценка работы">
+    <decisionTable id="DecisionTable_1fssz0q">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="long">
+          <text>count</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="nevermind" typeRef="boolean" />
+      <rule id="DecisionRule_0kytjlu">
+        <inputEntry id="UnaryTests_08srmpu">
+          <text>&lt;= 10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ykedeb">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q4i5am">
+        <inputEntry id="UnaryTests_1vi7p8n">
+          <text>&gt; 10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cj6lt0">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="approve-external">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
